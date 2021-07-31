@@ -1,0 +1,216 @@
+svg - preferência (vetorial- tamanho que quiser e não perco definição, e é um elemento html (texto) - ganho espaço na minha memória)
+png - melhor definição de cores e mais leve
+gif - imagem que eu não tenha muita definição de cor, ele não tem uma grande escala, são mais pixelados
+jpeg - imagem como uma foto (ex. propraganda)
+img - sempre letra minúscula e sem espaço~
+! + enter: cfria toda a estrutura para você 
+troca a linguagem do site e o título
+a linguagem é usada para o navegador usar o indioma para a pesquisa
+apaga a linha 5
+antigamente tinha uma tag chamada <div> para dividir o meu html
+eu posso dividir por ex. em cabeçalho e corpo/conteudo
+# referenciar um id de um elemento
+o div nos dá uma organização, porém não tem nenhum significado semântico
+Semântica - acessibilidade - ferramenta que faz a leitura para deficientes visuais
+Agora eu tenho uma tag que eu consigo organizar e fazer um significado semântico
+agr eu tenho meu main e o meu head
+Quando eu coloco 100% de altura ao amin ele se ajusta ao tamanho do conteúdo
+Quando eu coloco a largura 100% ele se ajusta ao tamanho do site/tela
+button type subit - formulário
+<a> - âncora/link - elemento que faz isso
+com esse link eu direciono ele para outro site
+outra pag de site - xxx.html, cria outra página
+<nav> - dá um significado semântico ao meu ul
+O id sempre vai ficar dentro do primeiro <>
+section - é um divisor com semantica, porque eu to criando como se fosse um capítulo de livro
+eu não crio uma seção para a imagem porque eu tenho só ela (1), eu preciso de mais elementos para criar.
+A imagem tem a sua própria semântica
+global css - vai ser o css principal do site
+link:css ( o visual code cria ) - no head após o meu title
+rel = relacionado a uma folha de estilo
+coloca a fonte antes do style (LINK CSS)
+16 px = 1 rem
+INPUT - campo de formulário, colocar campo. Como se fosse uma entrada mas é um campo do formulário
+Por cascata de hierarquia (de um elemento pro outro), tudo que eu aplico no body vai pro que tem dentro (a formatação de fonte)
+Os únicos que não recebem essa formatação por hierarquia são o button e o input (por isso que eu coloco)
+cursor - temos vários cursores
+tipos de cursor - site no ww3
+O a precisa de um href (para saber aonde ele vai)
+link - está relacionado a qual tipo de infromação
+a - está relacionada a uma navegação (terá outro edereço, arquivo ou site)
+eu tenho que colocar um id na div porque como ela é um elemento comum, eu não consigo formatar algo específico sem o id.
+A altura está informada no figurama
+Todo conteúdo que foi adicionado mais recentemente será sobreposto a antiga, em caso que o conteúdo do seu elemento vaze da largura, definida para o cabeçalho
+display - a forma de exibição de padrão dos componentes
+display block - como se fossem blocos (90%) - por isso ta um de cima do outro
+bloco - sempre como fosse empilhado (mind)
+display in line - coloca dentro de uma linha (um do lado do outro), eu tenho que aplicar nos dois, em cada elemento.
+inline block - vai acertar pelo border box
+inline - só vai ter formatação no texto 
+Então o inline block vai dar a formatação inteira
+Então nossa vida foi facilitada por um FLEX box
+Então: o flex box veio para facilitar a maneira de alinhar os elementos no site
+Era muito complicado alinhar, eram muitas propriedades
+conteiner - aletera a formatação do CONTEÚDO DO CABEÇALHO, das letras, então o width é do texto
+IN LINE É SÓ PARA elemento E NÃO PARA CONTAINER (CONJUNTO)
+nav/li - não muda na formatação, pois eles tem o mesmo conteúdo, são a lista do menu
+antes era muito complicado fazer todo esse sistema
+Quando eu defino com o width fixo, quando eu diminuo ele não aparece
+Então eu defino um max witdh então ele vai ter um máximo de largura (quando ele chegar ele para), mas quando é menor, ele começa a se ajustar
+***********Quando não definimos o tamanho da altura ele vai ae basear no tabanho do conteúdo**********
+Com isso eu não consigo alinhar ele (ex. centro vertical), porque eu não tenho um parâmetro, a altura é o tamnho do texto
+não definimos uma margem dos elementos, porque o meu logo é maior do que a minha lista, logo não vai ficar igual
+altura =, alinhamento =.
+No nav você não consegue colocar o IN-LINE
+por isso trabalhamos com o flex no nav
+Na formatação sem vírgula quer dizer que para todo elemento que está dentro desse outro (ex. nav ul, todo ul no nav).
+Então todo ul dentro do nav vai sofrer, se tiver fora nn sofre
+Mesmo que o li esteja dentro do ul, eu preciso formatar só o LI, e no ul eu não tenho um list style
+Só ussamos vírgula quando falamos da fonte, de resto, separamos com espaço
+MARGIN - DA BORDA PRA FORA
+PADDING - DA BORDA PRA DENTRO
+uso VÍRGULA para aplicar o bloco de formatação/estilo para esses 3 elementos
+quando eu to aplciando e está no lado sem vírgula: ex. nav ul li eu to formantando li dentro do ul dentro da nav
+Se eu coloco só um elemento, ele vai formatar todos os elementos do meu site´
+É difícil você ter mais de um nav no mesmo site (porque é navegação)
+Classes e ID - o ponto define a classe
+Classe - é como se fosse o modelo XPTO em um carro específico
+A classe é uma boa prática porque eu começo a definir pequenas coisas
+ Budstrap - blibioteca de CSS, eu pego, coloco o CSS dele no hml, eu coloco o link do CSS dele, eu não escrevo ele, eu só uso as classes baseadas nos modelos
+Eu consigo colocar essa classe reaproveitando em uma div, section em qualquer elemento que tenha o mesmo estilo/funcionalidade do CSS.
+SELECIONAR TODOS (EX. MAIN) - CONTROL D
+DIV X SECTION X MAIN
+DIV - não tem significado semântico, ele somente ignora (é uma divisão) - eu mudo meu layout (posicionar de maneira diferente)
+SECTION - é uma seção pro meu site que eu tenho o significado semântico - eu divido o meu conteúdo (ex. app do picpay - atividades, favoritos, etc)
+MAIN - é o conteúdo principal, normalmente, ele está por fora do section, pois o conteudo principal do meu site tem várias seções
+Os 3 são BLOCOS que eu posso colocar um conteúdo dentro
+Tanto no main, no div e no section se eu quiser formatá-las eu tenho que colocar EM CADA UMA.
+COm uma classe eu consigo aplicar a classe para os 3 elementos, com isso, eu tenho 1 código
+CLASS X VÍRGULA (É A MESMA COISA)
+Casp seja uma coisa muito específica eu faço um id para formatar no meu css
+. --> classe
+# --> id
+classe btn (nome) que formata todos os meus botões (as pricipais características) - no site
+Boa prática - sempre deixar um link no logo para voltar
+O input tem vários tipos, o mais normal é o texto
+é através desse name que as liguagens de programação vão aparacer no servidor
+required - campo obrigatório do fomrulário
+problema de formatação: porque esse conteúdo da label eu não consi
+go porque meu imput da dentro do "Nome Completo".
+Como o meu input e o meu label estavam juntos, eu não conseguia formatá=los separadamente, tudo que eu formatasse no label seria para o input e isso é um problema.
+Em um formulário, é mais fácil eu usar a label de email ao invés de text porque ela valida se a infromação colocada realmente é um email.
+type: number - abre uma setinha com intervalo de número
+Eu também posso colocar um step (para ter um intervalo, ex. de meio em meio)
+max (não vai mais me deixar subir)
+min (não vai deixar descer)
+Ele já reajusta o tamanho do input para o dado que vou colocar
+Se fosse uma data ele já colocava o calendário
+Textarea - possibilita que escrevam uma quantidade de coisas maior
+qualuqe coisa tem que ser responsiva, definir o tamnaho em qualquer dispositivo, por isso que não usamos rolss
+Eu posso aplicar quantas classes eu quiser no HTML, separando-as por espaço
+Agora em semantia eu tenho um btn (que é algo comum entre os botões) e criamos outras classes (que conseguimos identificar)
+last child - o último filho daquele CONTAINER
+Todo formulario não consegue funcionar sem uma tag <form>
+Vai antes do meu h1 e atnes da miha dívida do container
+Essas informações serão direcionadas para um servidor
+Sem o form não cosneguimos enviar a informação para o nosso servidor
+nenhum parametro é obrigatório, mas eu tneho a ação e o método (maniero que eu envio pro meu servidor e pra minha próxima página)
+Name determina como iremos acessar essas informações no text area
+Na tag label, quando eu clicar na palavra, ela é um tag, ela vai selecionar o meu campo. Quando eu coloco a aquela label for um id eu consigo fazer com que todos façam essa função.
+Para mudar o texto/mensagem de invalidez teremos que usar o Java Script
+eu vou formatar o spam a partir do form container (que é um filho de form container)
+Comit - versões salvas no github
+git add . (eu vou versionar tudo)
+Required - obrigatório (borda vermenlja)
+label (rótulo), type: rage (é para classificar) -  tem várias outras ferramentas
+focus: acessibilidade - dá um foco
+No css eu perco algumas coisas, eu posso ter o foco e a validação come esse foco
+border-with - engordou a borda, tem um peso maior 
+validação not textarea - para tirar o textarea
+Nós estamos com todos os campos required ele já está fazendo a validação
+Spam - é um terxto sem semântica, é tipo uma div sem texto
+as divisões semânticas são header main
+Eu to colocando aquele texto porque eu quero colocar alguma formatação diferente
+td - colunas
+tr - linhas da tabela (você comça com ele)
+Em vez de ficar se preocupando teremos um fake APIs (contatos) para testarmos os modelos 
+JAVA Script
+gerar o foco e perder o foco em uma caixa de testo é uma ação
+evnair - click - gera um evento
+EventListener - quando alguém saia fora do eixo ela vai lá e tomava alguma ação
+Delimitamos qualquer coisa na função, pela chave e não pela identificação, pois eu sei quando acabou um comando com; e um bloco de comando por []
+O sistema vai lendo caracter por caracter, por isso evitar caracter especial
+todas as linguagens de programação são baseadas no ingles - que o indioma mais simples do mundo. Então o ideal seria desenvolver todo o código em inglês
+então aprovou-se dentro da linguagem digital o h como representação do acento agudo na adaptação para o português
+O JS é uma linguagem orientada a eventos
+cada parte do navegador/html ele vai gerar um evento, então eu tenho vários eventos
+se eu pesquisar hava scrip events - primeiro site
+change - toda vez que aquele elemento sofrer uma mudança
+click - clicar no botão
+ mouse hover - também uso no CSS para formatar a mensagem, o css tá chamando o hover
+ O CSS é escrito em JS
+ O seu HTML é JS
+ O seu navegador é CSS
+ É muitos eventos que são gerados no Java
+ drag - arrasta e solte
+ drop
+ drag enter e drag leave - selecionar e arrastar
+ whell - é a rodinha do mouse 
+esses eventos eu coloco no addeventlistener
+marquee - vai passando no lado
+EXPRESSÃO REGULAR - começa sempre com barrinhas
+g - global - tudo que tiver excrito
+[] - lista
+eu posso colocar numero também de elementos 
+^ - ele tem começar com esse CONJUNTO
+*$ - ele tm que finalizar com esse conjunto
+Dicionário
+eu ocloco como se fosse o nome da chave do Dicionário
+No JS, nós colocamos ... na frente das mensagens - parametros
+então ele pega cada uma (não importa quantos) dessas vírgulas e transforma em uma lista 
+então o chava que coloca os [] quando eu recebo o parametro da minha função
+for - mensagens.forEah(função do que ele faz)
+for(let i = 0; i < mensagens.lenght; i++) let - variável, ela só existir quando o for existir, i = indice, somar de um em um ++ (no python é i+= 1)
+eventos
+onchange - quando o elemento muda
+click - clicar em um botão
+mousehoover - também usamos no CSS, porque ele é escrito em Java Script
+O HTML é JS, o navegador é JS
+drag and drop - arrastar e soltar um elemento
+marquee - o elemento fica com uma animação
+nome msg-error - o nome é como se fosse um id para diferenciar os spans
+docker - criar container
+orquestrar todos esses containers - covainert
+instruções que passamos ele vai avaliar e desativar ou ativar esse container
+ex. feu tenho ambiente de produção, js, python 3.9, servidor que esta rodando o site, servidor de aplicação para os meus serviços
+várias configurações apra a minha aplicação picpay funcionar
+container no doctor ocm todas as instalações do ambiente, eu uso para subir o catianer
+toda a vez que acaba o dia ele pega o ambiente (container do dia) e ele vai baixar um novo para você com um espelho da funçãoentão vai garantir que eu tenha sempre a versão mais atual do meu sistema para trabalhar no dia seguint
+roll back - eu desintalo a versão que deu pau e pego a versão anterior que estava funcionando - reinstalação 
+no story set ocnseguimos animar, e também ocular camadas - é para ilustrações
+sempre baixar em SVG (por traz é html - ele é vetorial, quando você estiga ou diminui ele não perde a resolução)
+flex box - cada div que nós temso é um container de html, para eu fazer o alimento desses conteudos no html fazemos o flexbox
+display: flex - eu estou alinhanod o conteudo dentro da div
+grid layout - vai ser responsável por definir as areas do nosso site, o layout do meu site, sistema
+utilizamos muito em sistema corporativos, porque eu tenho um dashbord com um gráfico de vendas, transações e outros - eu tenho uma área de indicadores para o meu gerentr acessar e ter uma visão da empresa, como ela se comporta
+indicador qual é o problema mais recorrente, qual a região que mais reclama
+landing page - essas entrada no sistema, site do picpay, ela está contantdo sobre o proxudo. ex. iza do picpay
+startap - ladinpage explicando sobre e assim coloca um espaço para ver quem está interessado, então é assim que a gente vê  se o meu produto tem uma aceitação no mercado
+email marketing também na landing page
+ferramentas como o quickstarter que fazem isso para você
+em cada pasta tem um indice, ele é o primeiro arquivo, de acesso a pagina, então se eu crio um arquivo index e eu chamo a pasta ele vermenlja
+diminue o URL
+INDEX - PONTO DE ACESSO DA pasta
+cada div que vai ter um estilo
+landing page - tem só informações do produto, normalmente quando é startup, nós falamos como vai ser o produto e coloco um questionario de aceitação, porque eu consigo ver que se eu lançar eu tenho sucesso ou nõa
+cmd
+media types
+media - são telas que mostram o nosso o nosso conteúdo
+query - consulta que tem condições
+media query - consulta sobre a mídia que está tarbalahndo, eu quero ver a resolução da tela
+ferramenta de produtividade de HTML - Emmet (voc~e pode intalar no pycharm) - ele já vem no VC
+responsivo - ele se adapta as diferentes telas, ex. tablet, celular
+quando você estreita 
+quando nóis temos pouco detalhe, é mias fácil, o discord é ruim nesse sentido porque ele não é intuitivo
+o rpogramador entende os elementos e avlia a usabilidade do nosso site, a pessoa que desenvolve não teste, porque voc~e sabe como você pensou
+

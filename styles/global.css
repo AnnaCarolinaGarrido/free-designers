@@ -1,0 +1,348 @@
+* {
+    margin: 0; /* top direita bottom e esquerda, vertical (top, bottom) e horizontal (left, right)
+    auto - ocupa nas laterais as mesmas proporções na esquerda e direita
+    usa espaço*/
+    padding: 0;
+    outline: 0;
+    /* linha que o html coloca quando você seleciona algo, bordinha em volta ex. quando coloca link (formulário) */
+    box-sizing: border-box;
+    /* é um reset rápido, as medidas que mais dão problema são essas 4
+    border box: aplica todas as medidas sem alterar o tamanho do elemento
+    content box: aumenta para que seu conteúdo tenha o tamanho que você quer*/
+}
+
+body {
+    background: #efefef;
+}
+
+input, body, button {
+    font: 1rem Roboto, sans-serif;
+/* fonte padrão do site*/
+}
+
+button {
+cursor: pointer;
+}
+
+header {
+    background: #bd465f;
+    /*background: linear-gradient(to botton, #000, #darkgreen   */
+}
+#container {
+    max-width: 1160px;
+    /*
+    justify content - justificar o conteudo na minha horizontal
+    flex-end: tudo pro final
+    */
+    display: flex;
+    /* flex-direction: column; - seu eu quisesse colocar em baixo*/
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+}
+
+/*nav {
+    margin-left: 120px;
+} não dá PROPORCIONALIDADE AO SITE - se eu diminuir não muda a proporção
+start -esquerda
+end - direita
+space around - bordas de fora (mesmo espaçamento ao redor de cada elemento) tanto da esquerda quanta a direita
+entre os elementos - espace between - só considera a margem entre os elementos 
+align-itens:center, flex-end, flex-start*/
+
+.menu {
+    flex: 1; /* ocupa todo o espaço todo faltando a esquerda*/
+    margin-left: 120px;
+    min-width: 550px;
+}
+/*ul é um container dos li
+flex - MUDAR DE DIREÇÃO*/
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul li {
+    list-style: none; /* tópico*/
+    display: flex; /* para centralizar com o align */
+    align-items: center;
+}
+
+.menu ul li a {
+    font: 24px Ubuntu, sans-serif;
+    color: #fff; /* simplificado, se as duas letras são iguais coloca 3. Ou é 3 ou é 6 */
+    text-decoration: none;
+}
+
+main {
+    max-width: 1250px;
+    margin: 0 auto; /* centralizar o bloco, se é texto eu uso o text align center) */
+    display: flex; /* um do lado do outro*/
+    justify-content: space-between;
+}
+
+.margin-imagem-grande {
+    margin-top: 80px;
+}
+/* > - é mais específico - o elemento exatamente que está dentro, é o h1 imediato, não todos
+fonte: weight (peso), tamanho e fonte
+900 ou black - negrito
+*/
+
+#info-freedesigners {
+    margin: 130px 0 0 50px;
+    /* topo direita embaixo esquerda */
+    width: 500px; /* largura do texto*/
+}
+
+#info-freedesigners > h1{
+    font: 900 72px Roboto, sans-serif;
+    line-height: 84px; /* altura/espaçamento da linha*/
+    color: #2d2d30;
+}
+
+#info-freedesigners > p {
+    margin-top: 20px; /* margem em cima */
+    line-height: 30px;
+    font-size: 24px; /* porque eu só vou alterar o tamanho da fonte 
+    font-family: tipo de fonte ex. Roboto, sans-serif*/
+    color: #a3a3a3;
+}
+
+#info-freedesigners > button {
+    font: 24px Roboto, sans-serif;
+    color: #fff;
+    background: #bd465f;
+    padding: 12px 75px;
+    /* sempre o padding da vertical no botão tem que ser menor do que a horizontal 
+    vertical e horizontal
+    */
+    border: 0; /* limpei ela */
+    border-radius: 20px; /*arredondar*/
+    margin-top: 20px;
+    transition: background-color 0.5s; /* eu preciso colocar para não ficar uma coisa robótica, sempre na FORMATAÇÃO PRINCIPAL*/
+}
+/* pseudoseletor - seletores aplicados em cima de seletores - eventos que ocorrem no navegador. Mouse sobre algum elemento - evento de over */
+/* #info-freedesigners > button:hover {
+    background:#d892a1;
+    /* color: #2d2d30; 
+    box-shadow: 0 2px 5px #2d2d30; }*/
+
+#info-freedesigners > button:hover {
+    background: #d892a1
+}
+#main-container {
+        width: calc(100vw - 80px);
+        margin: 0 auto;
+}
+#main-container > h1 {
+    font: 900 48px Roboto, sans-serif;
+    margin-top: 36px;
+}
+.form-container { /* label, input */
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    /* função calc (calcular), vw (a largura do seu dispositivo)*/
+    /* Não preciso da margem */
+    }
+    /* isso você está formatando o seu texto do placeholder*/
+    
+.form-container > .tip { /* o span que tiver essa classe não vai ter essa formatação */
+    /* >sapn:not(.nome__msg.error) - como se eu tivesse excluindo essa formatação de um elemento que possui esas caracteríticas*/
+    margin-top: 4px;
+    border: 1px  solid sandybrown;
+    color: sandybrown;
+    flex: 1;
+    padding: 8px 16px;
+    background: cornsilk;
+    border-radius: 4px;
+    transition: linear visibility 0.2s, opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute; /* eu quero colocar exatamente na posição que ele encontra, e não o posicionamento que o html faz*/
+    transform: translateY(62px); /* translado - eu vou mover ele, como andar no eixo Y positivo, o negativo ele sobe
+    transformar na parte de programação é calcular
+    eu tenho um plano cartesiano bidimencional (x e Y)
+    translação - movimentar
+    escala aumentar iu diminuir (como se fosse um zoom
+    positivo X (horizontal)
+    absoluto para ele não sair da tela 
+    A profundidade é o z
+    Pra cima é negativo
+    pra baixo é positivo
+    scala você acaba trabalhando tanto no x como no y (translate faz os dois)
+    scale - abaixo de um diminui, acima de um você aumenta
+    transform:scale(1.5); - é um efeito de zoom
+    Rotate - rotação
+    transform: rotate (45deg) - deg é graus
+    se colocar 180 dá pra fazer um efeito de x
+    z index - camada
+    
+    transform: rotate(180deg) translateY(15px);
+    opacidade: 0.4px */
+}
+
+.form-container:hover > span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.form-label {
+    color: #2d2d30;
+    margin: 0 0 4px 2px /* ajusta o input*/
+}
+
+.form-control {
+    font: 400 18px Roboto, sans-serif;
+    border-radius: 4px;
+    border: 1px solid #e2e3ef;
+    padding: 8px 16px;
+    transition: border-color 0.5s;}
+
+    
+.valido { /* se ele for validado */
+    border-color: #4caf50
+    }
+    /*NO texto, não temos como ter a validação, por isso essa formatação irá funcionar para todos os form-controls ativos menos o textarea porque não faz sentido */
+    
+.invalido {
+    border-color: red;
+    }
+
+.msg-error {
+    margin-top: 4px;
+    color: #f44336;
+}
+
+.form-control:focus {
+border: 2px solid #555;
+}    /* para ele ter sequencia e sobressair o vermelho */
+
+.form-control::placeholder {
+color: #ccc
+}
+
+textarea.form-control {
+    height: 300px;
+    resize: none;
+    overflow: hidden; /* eu escondo minha barra de ir por lado*/
+}
+/* 
+textarea - caixa de texto para dar exemplo
+cols="80" quantos caracterez para definir a largura 
+rowns="10" quantidade de linhas
+Hoje o height faz isso pra gnt*/
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.btn-container > .btn {
+margin-right: 16px;
+}
+    
+.btn-container > btn:last-child {
+    margin-right: 0;
+    /* last child - o último filho da hierarquia*/
+}
+
+.btn {
+    border-radius: 4px;
+    padding: 16px 64px;
+    border:0; 
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #bd465f;
+    color: #fff;
+    border: 0;
+    padding: 16px 64px;
+    border-radius: 4px;
+    transition: background-color 0.25s;}
+    
+.btn-primary:hover {
+    background: #bd465fab;
+}
+.btn-secundary {
+    background: transparent;
+    color: #bd465f;
+    border: 2px solid #bd465f;
+    border-radius: 4px;
+    padding: 16px 64px;
+    font-weight: 600;
+    transition: background-color 0.25s;
+}
+
+.btn-secundary:hover {
+    background: #bd465f;
+    color: #fff;
+    font-weight: normal;
+}
+
+.btn-table {
+    padding: 8px 24px;
+}
+
+.btn-menu {
+    font: 24px Roboto,sans-serif;
+    color: #fff; 
+    padding: 15px 35px;
+    background: #d892a1;
+    border: 0;
+    border-radius: 4px; /* arredondamento*/
+    transition: background-color 0.5s;
+}
+
+.btn-menu:hover {
+    background: rgba(216, 146, 161, 0.4);
+}
+
+.form-container {
+font: 400 /*regular*/ 18px Roboto, sans-serif;
+border-radius: 4px;
+border: 1px solid #e2e3ef;
+padding: 8px 16px;
+}
+.tabela-precos {
+border-collapse: collapse; /*cola uma borda na outra*/
+width: 100%;
+margin-top: 80px;
+}
+.tabela-precos-cabecalho th { /*título de cada coluna */
+    font-size: 24px;
+    color: #bd465f
+}
+.tabela-precos-info td {
+    font-size: 20px;
+}
+/* ele pega a linha que você pede, ex (2) pega a segunda linha
+pares - even em ingles
+odd - ímpares (posições)*/
+.tabela-precos-info tr:nth-child(even) {
+    background: #dbdbdb; /* um pouquinho mais escuro */
+}
+
+.tabela-precos-info tr:last-child td {
+    border-bottom: 1px solid #555;
+}
+
+th {
+    border-bottom: 1px solid #555;
+    padding: 10px;
+}
+
+td {
+    border-bottom: 1px dotted /* traçadinho */ #555;
+    padding: 10px;
+}
+tfoot > tr > td {
+    border: 0;
+    text-align: center; /* o a (âncora) é um texto então alinhamos ele com text align*/
+    padding-top: 25px;
+}
